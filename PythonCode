@@ -1,0 +1,60 @@
+def aa(z):
+  if z > 79:
+    return 4.00
+  if 69 < z < 80:
+    return 3.00
+  if 59 < z < 70:
+    return 2.00
+  if 49 < z < 60:
+    return 1.00
+  if z < 50:
+    return 0.00
+
+while True:
+  start = input("n เริ่มต้น/ไปต่อ | y ออกโปรแกรม | a แสดงGPA : ")
+  if start == "y":
+    break
+  elif start == "a":
+    sumkit = kitsci + kitmatch + kithistory
+    sumpoint = ana + anb + anc
+    sumallkit = sumpoint / sumkit
+    print(sumallkit)
+  elif start == "n":
+    program = input("1 Science | 2 Match | 3 History : ")
+    if program == "1":
+      print("SCIENCE")
+      kitsci = int(input("ระบุหน่วยกิต: "))
+      a = int(input("คะแนนเก็บ: "))
+      b = int(input("คะแนนกลางภาค:"))
+      c = int(input("คะแนนปลายภาค:"))
+      d = int(input("คะแนนการเข้าชั้นเรียน:"))
+      z = a + b + c + d
+      sci = aa(z)
+      print(sci)
+      ana = sci * kitsci
+    if program == "2":
+      print("MATCH")
+      kitmatch = int(input("ระบุหน่วยกิต: "))
+      a = int(input("คะแนนเก็บ: "))
+      b = int(input("คะแนนกลางภาค:"))
+      c = int(input("คะแนนปลายภาค:"))
+      d = int(input("คะแนนการเข้าชั้นเรียน:"))
+      z = a + b + c + d
+      match = aa(z)
+      print(match)
+      anb = match * kitmatch
+    if program == "3":
+      print("HISTORY")
+      kithistory = int(input("ระบุหน่วยกิต: "))
+      a = int(input("คะแนนเก็บ: "))
+      b = int(input("คะแนนกลางภาค:"))
+      c = int(input("คะแนนปลายภาค:"))
+      d = int(input("คะแนนการเข้าชั้นเรียน:"))
+      z = a + b + c + d
+      history = aa(z)
+      print(history)
+      anc = history * kithistory
+    else:
+      print()
+  else:
+    print()
